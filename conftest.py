@@ -101,7 +101,7 @@ def pytest_collection_modifyitems(config, items):
       class_property_value = getattr(item.cls, class_property_name)
       item.add_marker(pytest.mark.xdist_group(class_property_value))
 
-
+#ignore
 @pytest.hookimpl(trylast=True)
 def pytest_configure(config):
   config_line = "xdist_group_class_property: group tests by a property of the class that contains them"
